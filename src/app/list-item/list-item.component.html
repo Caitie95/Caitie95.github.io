@@ -1,8 +1,8 @@
 <h4>{{story.title}} - {{story.author.name}}</h4>
 <a *ngIf="story.link" href="{{story.link}}">Link</a>
-<span *ngFor="let genre of story.genres">
-    <p>{{genre.name}}</p>
-</span>
+<div class="genre" *ngFor="let genre of story.genres">
+    <div class="{{genre.name}}">{{genre.name}}</div>
+</div>
 <div *ngFor="let identity of story.identities">
     <p>{{identity.romantic.romantic}} {{identity.sexuality.sexuality}}</p>
 </div>
