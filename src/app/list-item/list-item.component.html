@@ -1,0 +1,7 @@
+<h4>{{story.title}} - {{story.author.name}}</h4>
+<span *ngFor="let genre of story.genres">
+    <p>{{genre.name}}</p>
+</span>
+<div *ngFor="let identity of story.identities">
+    <p>{{identity.romantic.romantic}} {{identity.sexuality.sexuality}}</p>
+</div>
