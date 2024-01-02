@@ -8,4 +8,5 @@ export interface ListStory {
     author: Author
     genres: Genre[];
     identities: Identity[];
+    link?: string;
 }
