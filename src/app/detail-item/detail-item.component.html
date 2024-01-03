@@ -1,0 +1,13 @@
+<div *ngIf="story">
+    <h4>{{story.title}} - {{story.author.name}}</h4>
+    <a *ngIf="story.link" href="{{story.link}}">Link</a>
+    <div class="genre" *ngFor="let genre of story.genres">
+        <div class="{{genre.name}}">{{genre.name}}</div>
+    </div>
+    <div *ngFor="let identity of story.identities">
+        <p>{{identity.romantic.romantic}} {{identity.sexuality.sexuality}} - {{identity.explicit.explicit}} - {{identity.prominance.prominance}}</p>
+    </div>
+    <div>{{story.description}}</div>
+    <div *ngFor="let warning of story.warning">{{warning.warning}}</div>
+</div>
+<div *ngIf="!story">Book not found</div>

@@ -1,4 +1,4 @@
-import { DataExplicit } from "../data-structure/data-explicit";
+import { DataExplicit } from "../interfaces/data-structure/data-explicit";
 
 export const EXPLICIT: DataExplicit[] = [
     { id: 1, type: "Word Used"},

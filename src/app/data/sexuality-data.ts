@@ -1,4 +1,4 @@
-import { DataSexuality } from "../data-structure/data-sexuality";
+import { DataSexuality } from "../interfaces/data-structure/data-sexuality";
 
 export const SEXUALITY: DataSexuality[] = [
     {id: 1, sexuality: "asexual"},

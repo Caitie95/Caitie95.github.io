@@ -1,4 +1,4 @@
-import { DataProminance } from "../data-structure/data-prominance";
+import { DataProminance } from "../interfaces/data-structure/data-prominance";
 
 export const PROMINANCE: DataProminance[] = [
     { id: 1, prominance: "Main"},

@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
-import { ListStory } from './story-structure/list-story';
+import { ListStory } from './interfaces/story-structure/list-story';
 import { STORIES } from './data/story-data';
 import { AUTHOR } from './data/author-data';
-import { Genre } from './story-structure/genre';
+import { Genre } from './interfaces/story-structure/genre';
 import { GENRE } from './data/genre-data';
-import { DataIdentity } from './data-structure/data-identity';
-import { ListIdentity } from './story-structure/list-identity';
+import { DataIdentity } from './interfaces/data-structure/data-identity';
+import { ListIdentity } from './interfaces/story-structure/list-identity';
 import { ROMANTIC } from './data/romantic-data';
 import { SEXUALITY } from './data/sexuality-data';
-import { DataStory } from './data-structure/data-story';
-import { DetailStory } from './story-structure/detail-story';
-import { DetailIdentity } from './story-structure/detail-identity';
+import { DataStory } from './interfaces/data-structure/data-story';
+import { DetailStory } from './interfaces/story-structure/detail-story';
+import { DetailIdentity } from './interfaces/story-structure/detail-identity';
 import { EXPLICIT } from './data/explicit-data';
 import { PROMINANCE } from './data/prominance-data';
-import { Warning } from './story-structure/warning';
+import { Warning } from './interfaces/story-structure/warning';
 import { WARNING } from './data/warnings-data';
 
 @Injectable({

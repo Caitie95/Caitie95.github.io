@@ -1,4 +1,4 @@
-import { DataRomantic } from "../data-structure/data-romantic";
+import { DataRomantic } from "../interfaces/data-structure/data-romantic";
 
 export const ROMANTIC: DataRomantic[] = [
     {id: 1, romantic: "aromantic"},
