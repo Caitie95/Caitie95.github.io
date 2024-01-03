@@ -7,4 +7,6 @@ export interface DataStory {
     genres: number[];
     link?: string;
     identities: DataIdentity[];
+    description: string;
+    warnings: number[]
 }

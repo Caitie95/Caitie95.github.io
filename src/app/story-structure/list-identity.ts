@@ -1,7 +1,7 @@
 import { Romantic } from "./romantic";
 import { Sexuality } from "./sexuality";
 
-export interface Identity {
+export interface ListIdentity {
     romantic: Romantic;
     sexuality: Sexuality;
 }
