@@ -4,9 +4,10 @@ import { DetailItemComponent } from './detail-item/detail-item.component';
 import { ListViewComponent } from './list-view/list-view.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
-  {path: "", component: ListViewComponent},
-  {path: "story/:id", component: DetailItemComponent}
+  { path: "", component: ListViewComponent },
+  { path: "list", component: ListViewComponent },
+  { path: "story/:id", component: DetailItemComponent },
+  { path: '', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({

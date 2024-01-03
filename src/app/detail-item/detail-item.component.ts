@@ -21,8 +21,11 @@ export class DetailItemComponent {
     genres: [],
     identities: [],
     description: '',
-    warning: []
+    warning: [],
+    source: {}
   };
+  author: number = 0;
+  source: number = 0;
 
   constructor(private storyService: StoriesService, 
     private route: ActivatedRoute, 
@@ -30,11 +33,12 @@ export class DetailItemComponent {
 
   ngOnInit(): void {
     this.getDetailStory();
+    this.author = this.story.author.id;
+    this.source = this.story.source?.id ?? 0;
   }
 
   getDetailStory(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!);
     this.story = this.storyService.getDetailStory(id);
-    console.log(this.story.link)
   }
 }

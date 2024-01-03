@@ -1,5 +1,6 @@
 <div *ngIf="story">
-    <h4>{{story.title}} - {{story.author.name}}</h4>
+    <h4>{{story.title}} - <a [routerLink]="['../../list', {author}]">{{story.author.name}}</a></h4>
+    <div *ngIf="story.source"><a [routerLink]="['../../list', {source}]">{{story.source.source}}</a></div>
     <a *ngIf="story.link" href="{{story.link}}">Link</a>
     <div class="genre" *ngFor="let genre of story.genres">
         <div class="{{genre.name}}">{{genre.name}}</div>
@@ -10,4 +11,3 @@
     <div>{{story.description}}</div>
     <div *ngFor="let warning of story.warning">{{warning.warning}}</div>
 </div>
-<div *ngIf="!story">Book not found</div>

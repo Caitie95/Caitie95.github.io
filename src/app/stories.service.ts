@@ -24,8 +24,23 @@ export class StoriesService {
 
   constructor() { }
 
-  getListStories(): ListStory[] {
+  getListStories(author?: number, source?: number): ListStory[] {
     var stories: ListStory[] = [];
+    let storyIds: number[] = [];
+    if (author == null && source == null) {
+      storyIds = this.getRandomIds();
+    } else if (author != null) {
+      storyIds = this.getAuthorIds(author!);
+    } else if (source != null) {
+      storyIds = this.getSourceIds(source);
+    }
+    for (let id of storyIds) {
+      stories.push(this.getListStory(id))
+   }
+   return stories;
+  }
+
+  private getRandomIds(): number[] {
     const count = STORIES.length > 10 ? 10 : STORIES.length;
     let randoms: number[] = [];
     while (randoms.length < count) {
@@ -34,10 +49,15 @@ export class StoriesService {
         randoms.push(id);
       }
     }
-    for (let random of randoms) {
-      stories.push(this.getListStory(random))
-   }
-   return stories;
+    return randoms;
+  }
+
+  private getAuthorIds(id: number): number[] {
+    return STORIES.filter(s => s.author == id).map(s => s.id);
+  }
+
+  private getSourceIds(id: number): number[] {
+    return STORIES.filter(s => s.source == id).map(s => s.id);
   }
 
   private getListStory(id: number): ListStory {
@@ -99,7 +119,7 @@ export class StoriesService {
   }
 
   private getWarning(id: number): string {
-    return WARNING.find(w => w.id)?.warning ?? "Unknown";
+    return WARNING.find(w => w.id == id)?.warning ?? "Unknown";
   }
 
   private getListIdentities(identities: DataIdentity[]): ListIdentity[] {
