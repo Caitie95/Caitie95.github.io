@@ -35,5 +35,6 @@ export class DetailItemComponent {
   getDetailStory(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!);
     this.story = this.storyService.getDetailStory(id);
+    console.log(this.story.link)
   }
 }

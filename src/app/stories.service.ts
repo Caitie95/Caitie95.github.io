@@ -15,6 +15,7 @@ import { EXPLICIT } from './data/explicit-data';
 import { PROMINANCE } from './data/prominance-data';
 import { Warning } from './interfaces/story-structure/warning';
 import { WARNING } from './data/warnings-data';
+import { SOURCE } from './data/source-data';
 
 @Injectable({
   providedIn: 'root'
@@ -34,19 +35,23 @@ export class StoriesService {
       }
     }
     for (let random of randoms) {
-      let story: DataStory = STORIES.filter(s => s.id == random)[0];
-      stories.push(
-        {id: story.id, 
-        title: story.title, 
-        author: {id: story.author, 
-          name: this.getAuthorName(story.author)}, 
-        genres: this.getGenres(story.genres),
-        link: story.link,
-        identities: this.getListIdentities(story.identities)
-        }       
-      )
+      stories.push(this.getListStory(random))
    }
    return stories;
+  }
+
+  private getListStory(id: number): ListStory {
+    let story: DataStory = STORIES.filter(s => s.id == id)[0];
+    let listStory: ListStory = 
+      {id: story.id, 
+      title: story.title, 
+      author: {id: story.author, 
+        name: this.getAuthorName(story.author)}, 
+      genres: this.getGenres(story.genres),
+      link: story.link,
+      identities: this.getListIdentities(story.identities)
+      }       
+    return listStory;
   }
 
   getDetailStory(id: number) {
@@ -55,6 +60,7 @@ export class StoriesService {
       id: story.id,
       title: story.title,
       author: { id: story.author, name: this.getAuthorName(story.author)},
+      source: { id: story.source, source: this.getSource(story.source)},
       genres: this.getGenres(story.genres),
       link: story.link,
       identities: this.getDetailIdentities(story.identities),
@@ -64,11 +70,15 @@ export class StoriesService {
     return detailStory;
   }
 
-  getAuthorName(id: number): string {
+  private getAuthorName(id: number): string {
     return AUTHOR.find(a => a.id == id)?.name ?? "Unknown";
   }
 
-  getGenres(ids: number[]): Genre[] {
+  private getSource(id?: number): string | undefined {
+    return SOURCE.find(s => s.id == id)?.source ?? undefined;
+  }
+
+  private getGenres(ids: number[]): Genre[] {
     let genres: Genre[] = [];
     for (let id of ids) {
       genres.push({id: id, name: this.getGenre(id)})
@@ -76,11 +86,11 @@ export class StoriesService {
     return genres;
   }
 
-  getGenre(id: number): string {
+  private getGenre(id: number): string {
     return GENRE.find(g => g.id == id)?.genre ?? "Unknown";
   }
 
-  getWarnings(ids: number[]): Warning[] {
+  private getWarnings(ids: number[]): Warning[] {
     let warnings: Warning[] = [];
     for (let id of ids) {
       warnings.push({ id: id, warning: this.getWarning(id)})
@@ -88,11 +98,11 @@ export class StoriesService {
     return warnings;
   }
 
-  getWarning(id: number): string {
+  private getWarning(id: number): string {
     return WARNING.find(w => w.id)?.warning ?? "Unknown";
   }
 
-  getListIdentities(identities: DataIdentity[]): ListIdentity[] {
+  private getListIdentities(identities: DataIdentity[]): ListIdentity[] {
     let identitys: ListIdentity[] = [];
     for (let identity of identities) {
       identitys.push({
@@ -102,7 +112,7 @@ export class StoriesService {
     return identitys;
   }
 
-  getDetailIdentities(identities: DataIdentity[]): DetailIdentity[] {
+  private getDetailIdentities(identities: DataIdentity[]): DetailIdentity[] {
     let identitys: DetailIdentity[] = [];
     for (let identity of identities) {
       identitys.push({
@@ -115,19 +125,19 @@ export class StoriesService {
     return identitys;
   }
 
-  getRomantic(id: number): string {
+  private getRomantic(id: number): string {
     return ROMANTIC.find(r => r.id == id)?.romantic ?? "Unknown";
   }
 
-  getSexuality(id: number): string {
+  private getSexuality(id: number): string {
     return SEXUALITY.find(s => s.id == id)?.sexuality ?? "Unknown";
   }
 
-  getExplicit(id: number): string {
+  private getExplicit(id: number): string {
     return EXPLICIT.find(e => e.id == id)?.type ?? "Unknown";
   }
 
-  getProminance(id: number): string {
+  private getProminance(id: number): string {
     return PROMINANCE.find(p => p.id == id)?.prominance ?? "Unknown";
   }
 }
