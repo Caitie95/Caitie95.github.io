@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListItemComponent } from './list-view/list-item/list-item.component';
 import { DetailItemComponent } from './detail-item/detail-item.component';
 import { ListViewComponent } from './list-view/list-view.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListViewComponent } from './list-view/list-view.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
