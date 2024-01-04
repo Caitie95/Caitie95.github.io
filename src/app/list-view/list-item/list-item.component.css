@@ -1,3 +1,12 @@
+.card {
+    background-color: rgb(215, 241, 215);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .genre {
     border-radius: 5px;
     width: fit-content;

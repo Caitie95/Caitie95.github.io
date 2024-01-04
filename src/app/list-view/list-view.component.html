@@ -1,5 +1,9 @@
-<app-list-select [genres]="genres" [romantics]="romantics" [sexualitys]="sexualitys" [explicits]="explicits" 
+<div>
+    <app-list-select [genres]="genres" [romantics]="romantics" [sexualitys]="sexualitys" [explicits]="explicits" 
     (newItemEvent)="searchStories($event)"></app-list-select>
-<div *ngFor="let story of stories">
-    <app-list-item [story]="story"></app-list-item>
+</div>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+    <div *ngFor="let story of stories">
+        <app-list-item [story]="story"></app-list-item>
+    </div>
 </div>

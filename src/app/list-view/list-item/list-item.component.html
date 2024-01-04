@@ -1,12 +1,19 @@
-<h4>{{story?.title}} - {{story?.author?.name}}</h4>
-<div class="genre" *ngFor="let genre of story?.genres">
-    <div class="{{genre.name}}">{{genre.name}}</div>
+<div class="col">
+<div class="card">
+    <div class="card-body">
+    <h4 class="card-title">{{story?.title}} - {{story?.author?.name}}</h4>
+    <div class="genre" *ngFor="let genre of story?.genres">
+        <div class="{{genre.name}}">{{genre.name}}</div>
+    </div>
+    <div *ngFor="let identity of story?.identities">
+        <p>{{identity.romantic.romantic}} {{identity.sexuality.sexuality}}</p>
+    </div>
+    <nav>
+        <button type="button" class="btn btn-secondary">
+        <a routerLink="/story/{{story?.id}}" class="card-text">
+            Details
+        </a></button>
+    </nav>
 </div>
-<div *ngFor="let identity of story?.identities">
-    <p>{{identity.romantic.romantic}} {{identity.sexuality.sexuality}}</p>
 </div>
-<nav>
-    <a routerLink="/story/{{story?.id}}">
-        Details
-    </a>
-</nav>
+</div>
