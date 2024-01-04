@@ -6,6 +6,7 @@ import { DataGenre } from '../interfaces/data-structure/data-genre';
 import { DataRomantic } from '../interfaces/data-structure/data-romantic';
 import { DataSexuality } from '../interfaces/data-structure/data-sexuality';
 import { DataExplicit } from '../interfaces/data-structure/data-explicit';
+import { DropdownSelects } from '../interfaces/story-structure/dropdown-selects';
 @Component({
   selector: 'app-list-view',
   templateUrl: './list-view.component.html',
@@ -39,6 +40,16 @@ export class ListViewComponent {
 
   getListStories(author?: number, source?: number): void {
     this.stories = this.storyService.getListStories(author, source);
+  }
+
+  searchStories(searchElements: DropdownSelects): void {
+    this.stories = 
+    this.storyService.getListStories(undefined, 
+      undefined, 
+      searchElements.selectedGenre, 
+      searchElements.selectedRomantic, 
+      searchElements.selectedSexuality, 
+      searchElements.selectedExplicit);
   }
 
   getGenreList(): void {

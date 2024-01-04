@@ -44,15 +44,18 @@ export class StoriesService {
     return EXPLICIT;
   }
 
-  getListStories(author?: number, source?: number): ListStory[] {
+  getListStories(author?: number, source?: number, genre?: number, 
+    romantic?: number, sexuality?: number, explicit?: number): ListStory[] {
     var stories: ListStory[] = [];
     let storyIds: number[] = [];
-    if (author == null && source == null) {
-      storyIds = this.getRandomIds();
-    } else if (author != null) {
+    if (author != null) {
       storyIds = this.getAuthorIds(author!);
     } else if (source != null) {
       storyIds = this.getSourceIds(source);
+    } else if (genre != null || romantic != null || sexuality != null || explicit != null) {
+      storyIds = this.getFilteredIds(genre, romantic, sexuality, explicit);
+    } else {
+      storyIds = this.getRandomIds();
     }
     for (let id of storyIds) {
       stories.push(this.getListStory(id))
@@ -78,6 +81,19 @@ export class StoriesService {
 
   private getSourceIds(id: number): number[] {
     return STORIES.filter(s => s.source == id).map(s => s.id);
+  }
+
+  private getFilteredIds(
+    genre?: number, 
+    romantic?: number, 
+    sexuality?: number, 
+    explicit?: number): number[] {
+    return STORIES
+    .filter(s => genre == null || s.genres.some(g => genre == g))
+    .filter(s => romantic == null || s.identities.some(i => i.romantic == romantic))
+    .filter(s => sexuality == null || s.identities.some(i => i.sexuality == sexuality))
+    .filter(s => explicit == null || s.identities.some(i => i.explicit == explicit))
+    .map(s => s.id);
   }
 
   private getListStory(id: number): ListStory {

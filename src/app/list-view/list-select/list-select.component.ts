@@ -6,6 +6,7 @@ import { NgFor } from '@angular/common';
 import { DataRomantic } from 'src/app/interfaces/data-structure/data-romantic';
 import { DataSexuality } from 'src/app/interfaces/data-structure/data-sexuality';
 import { DataExplicit } from 'src/app/interfaces/data-structure/data-explicit';
+import { DropdownSelects } from 'src/app/interfaces/story-structure/dropdown-selects';
 
 @Component({
   imports: [ MatSelectModule,  NgFor],
@@ -25,9 +26,9 @@ export class ListSelectComponent {
   selectedSexuality?: number = undefined;
   selectedExplicit?: number = undefined;
 
-  @Output() newItemEvent = new EventEmitter<number>();
+  @Output() newItemEvent = new EventEmitter<DropdownSelects>();
 
-  addNewItem(value: number) {
+  addNewItem(value: DropdownSelects) {
     this.newItemEvent.emit(value);
   }
 }
