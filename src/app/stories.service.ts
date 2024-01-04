@@ -16,6 +16,10 @@ import { PROMINANCE } from './data/prominance-data';
 import { Warning } from './interfaces/story-structure/warning';
 import { WARNING } from './data/warnings-data';
 import { SOURCE } from './data/source-data';
+import { DataGenre } from './interfaces/data-structure/data-genre';
+import { DataRomantic } from './interfaces/data-structure/data-romantic';
+import { DataSexuality } from './interfaces/data-structure/data-sexuality';
+import { DataExplicit } from './interfaces/data-structure/data-explicit';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +27,22 @@ import { SOURCE } from './data/source-data';
 export class StoriesService {
 
   constructor() { }
+
+  getGenreList(): DataGenre[] {
+    return GENRE;
+  }
+
+  getRomanticList(): DataRomantic[] {
+    return ROMANTIC;
+  }
+
+  getSexualityList(): DataSexuality[] {
+    return SEXUALITY;
+  }
+
+  getExplicitList(): DataExplicit[] {
+    return EXPLICIT;
+  }
 
   getListStories(author?: number, source?: number): ListStory[] {
     var stories: ListStory[] = [];

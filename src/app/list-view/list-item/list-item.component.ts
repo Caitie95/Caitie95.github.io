@@ -7,5 +7,5 @@ import { ListStory } from '../../interfaces/story-structure/list-story';
   styleUrls: ['./list-item.component.css']
 })
 export class ListItemComponent {
-@Input() story?: ListStory
+  @Input() story?: ListStory
 }
