@@ -7,16 +7,10 @@ a {
     text-decoration: none;
 }
 
-.genre {
-    border-radius: 5px;
-    width: fit-content;
-    display: flex;
-    justify-content: space-between;
-}
-
 .Fantasy {
     background-color: rgb(181, 116, 242);
-    border: rgb(181, 116, 242);
-    display: flex;
-    justify-content: space-between;
+}
+
+.Romance {
+    background-color: rgb(241, 175, 210);
 }
