@@ -3,9 +3,9 @@
         <div class="card-body">
             <h3 class="card-header">{{story?.title}} - {{story?.author?.name}}</h3>
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                <div class="col">
-                    <div *ngFor="let genre of story?.genres">
-                        <div class="card text-center {{genre.name}}">
+                <div *ngFor="let genre of story?.genres">
+                    <div class="col">
+                        <div class="card text-center {{genre.name}} genre">
                             <div>{{genre.name}}</div>
                         </div>
                     </div>
