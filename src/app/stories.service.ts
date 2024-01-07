@@ -67,13 +67,15 @@ export class StoriesService {
   private getRandomIds(): number[] {
     const count = STORIES.length > 10 ? 10 : STORIES.length;
     let randoms: number[] = [];
+    let randomIds: number[] = [];
     while (randoms.length < count) {
-      let id = Math.floor(Math.random() * STORIES.length) + 1
-      if (randoms.indexOf(id) == -1) {
-        randoms.push(id);
+      let pick = Math.floor(Math.random() * STORIES.length) 
+      if (randoms.indexOf(pick) == -1) {
+        randoms.push(pick);
+        randomIds.push(STORIES[pick].id);
       }
     }
-    return randoms;
+    return randomIds;
   }
 
   private getAuthorIds(id: number): number[] {
@@ -98,6 +100,7 @@ export class StoriesService {
   }
 
   private getListStory(id: number): ListStory {
+    console.log(id)
     let story: DataStory = STORIES.filter(s => s.id == id)[0];
     let listStory: ListStory = 
       {id: story.id, 
