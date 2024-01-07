@@ -13,6 +13,22 @@
     margin: 10px;
 }
 
+.links {
+    margin: 10px
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+    .details {
+     margin:50px;
+    }
+  }
+
+  @media all and  (min-width: 1001px) {
+    .details {
+     margin:80px;
+    }
+  }
+
 .author {
     background-color: rgb(230, 244, 230);
 }

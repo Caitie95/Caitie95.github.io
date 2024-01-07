@@ -5,17 +5,20 @@
             <a [routerLink]="['../../list', {author}]">{{story.author.name}}</a>
         </button></h4>
 
-    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 links">
         <div class="col">
-    <div *ngIf="story.source"><a [routerLink]="['../../list', {source}]">
-        <button *ngIf="story.link" type="button" class="btn btn-light btn-sm">{{story.source.source}}</button>
-    </a></div>
-</div>
-<div class="col">
-    <a href="{{story.link}}"><button *ngIf="story.link" type="button" class="btn btn-light btn-sm">Read Here</button></a>
+            <div *ngIf="story.source">
+                <a [routerLink]="['../../list', {source}]">
+                    <button *ngIf="story.link" type="button" class="btn btn-light btn-sm">{{story.source.source}}</button>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <a href="{{story.link}}"><button *ngIf="story.link" type="button" class="btn btn-light btn-sm">Read Here</button></a>
+        </div>
     </div>
 
-    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-5">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
         <div *ngFor="let genre of story.genres">
             <div class="col">
                 <div class="{{genre.name}} card text-center genre">{{genre.name}}</div>
@@ -24,17 +27,31 @@
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col"><strong>Orientation</strong></div>
-            <div class="col"><strong>Explicitness</strong></div>
-            <div class="col"><strong>Character Prominance</strong></div>
-            <div *ngFor="let identity of story.identities">
-                <div class="row">
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4">
+            <div class="col">
+                <p><strong> Orientation</strong></p>
+                <div *ngFor="let identity of story.identities">
                     <div class="col">{{identity.romantic.romantic}} {{identity.sexuality.sexuality}}</div>
-                    <div class="col">{{identity.explicit.explicit}}</div>
-                    <div class="col">{{identity.prominance.prominance}}</div>
                 </div>
             </div>
+            <div class="col">
+                <p><strong>Gender</strong></p>
+                <div *ngFor="let identity of story.identities">
+                    <div class="col">{{identity.gender.gender}}</div>
+                </div>
+            </div>
+            <div class="col">
+                <p><strong>Explicitness</strong></p>
+                <div *ngFor="let identity of story.identities">
+                    <div class="col">{{identity.explicit.explicit}}</div>
+                </div>
+            </div>
+            <div class="col">
+                <p><strong>Character Prominance</strong></p>
+                <div *ngFor="let identity of story.identities">
+                    <div class="col">{{identity.prominance.prominance}}</div>
+                </div>
+            </div>                
         </div>
     </div>
 

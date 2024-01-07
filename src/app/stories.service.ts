@@ -20,6 +20,7 @@ import { DataGenre } from './interfaces/data-structure/data-genre';
 import { DataRomantic } from './interfaces/data-structure/data-romantic';
 import { DataSexuality } from './interfaces/data-structure/data-sexuality';
 import { DataExplicit } from './interfaces/data-structure/data-explicit';
+import { GENDER } from './data/gender-data';
 
 @Injectable({
   providedIn: 'root'
@@ -174,6 +175,7 @@ export class StoriesService {
       identitys.push({
         romantic: { id: identity.romantic, romantic: this.getRomantic(identity.romantic)},
         sexuality: { id: identity.sexuality, sexuality: this.getSexuality(identity.sexuality)},
+        gender: { id: identity.gender, gender: this.getGender(identity.gender) },
         explicit: { id: identity.explicit, explicit: this.getExplicit(identity.explicit)},
         prominance: { id: identity.prominance, prominance: this.getProminance(identity.prominance)}
       })
@@ -187,6 +189,10 @@ export class StoriesService {
 
   private getSexuality(id: number): string {
     return SEXUALITY.find(s => s.id == id)?.sexuality ?? "Unknown";
+  }
+
+  private getGender(id: number): string {
+    return GENDER.find(g => g.id == id)?.gender ?? "Unknown";
   }
 
   private getExplicit(id: number): string {

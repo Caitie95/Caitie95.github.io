@@ -3,11 +3,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.genre {
-    .Fantasy {     
-        background-color: rgb(193, 139, 243);
-    }
-    .Romance {
-        background-color: rgb(241, 175, 210);
-    }
+
+.Fantasy {     
+    background-color: rgb(204, 168, 237);
+}
+.Romance {
+    background-color: rgb(241, 175, 210);
 }
