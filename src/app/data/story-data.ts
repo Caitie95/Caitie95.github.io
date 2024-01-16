@@ -27,7 +27,7 @@ export const STORIES: DataStory[] = [
         description: "Our disabled protagonist, on a quest for her best friend with her grandmother, has been caught by a giant, and must undertake an escape before carrying on."},
     { id: 7, title: "The Girl and Her Unicorn", author: 6, genres: [1], warnings: [5], 
         link: "https://aroworlds.com/fiction/nine-laws/the-girl-and-her-unicorn/", source: 1,
-        identities: [{romantic: 1, sexuality: 4, gender: 3, prominance: 1, explicit: 2}, {romantic: 1, sexuality: 4, gender: 2, prominance: 2, explicit: 2},
+        identities: [{romantic: 1, sexuality: 4, gender: 6, prominance: 1, explicit: 2}, {romantic: 1, sexuality: 4, gender: 2, prominance: 2, explicit: 2},
         {romantic: 1, sexuality: 4, gender: 1, prominance: 2, explicit: 2}],
         description: "Ponder is sent as a sacrifice and presumed virgin to attract a unicorn to ask for a boon. But Ponder knows ze doesn't meet hir village's exacting " + 
         "requirements, and so ze must fail."},
@@ -48,5 +48,14 @@ export const STORIES: DataStory[] = [
         description: "Two singers renegotiate their queerplatonic relationship in a concert."},
     { id: 12, title: "Hunter", author: 6, genres: [1], warnings: [], link: "https://aroworlds.com/2021/12/17/hallo-aro-hunter-k-a-cook/",
         identities: [{romantic: 1, sexuality: 5, gender: 1, prominance: 1, explicit: 2}], source: 1,
-        description: "Prue travels the country searching for a witch, finding it better than the alternatives."}
+        description: "Prue travels the country searching for a witch, finding it better than the alternatives."},
+    { id: 13, title: "Before Crows' Eyes", author: 6, genres: [1], warnings: [1, 3, 5, 9], link: "https://aroworlds.com/2022/02/21/fiction-before-crows-eyes/",
+        identities: [{romantic: 1, sexuality: 1, gender: 2, prominance: 1, explicit: 2}, {romantic: 1, sexuality: 4, gender: 2, prominance: 2, explicit: 2}], source: 1, 
+        description: "Aro-ace baker Even is happy with how he is, and initially pleases his sex-negative village. But his refusal to marry has opinion of him souring."},
+    { id: 14, title: "The Cage and the Road", author: 6, genres: [1], warnings: [5, 9], link: "https://aroworlds.com/2022/02/24/fiction-the-cage-and-the-road/",
+        identities: [{romantic: 1, sexuality: 5, gender: 1, prominance: 1, explicit: 2}], source: 1,
+        description: "In Prue's travels around the country, she encounters unwanted company who raises questions about her own life."},
+    { id: 15, title: "Pillar", author: 6, genres: [1], warnings: [], link: "https://aroworlds.com/2022/11/07/hallo-aro-pillar-k-a-cook/",
+        identities: [{romantic: 1, sexuality: 4, gender: 1, prominance: 1, explicit: 2}], source: 1,
+        description: "Quick doesn't want marriage or children, and tires of the demands of those who do."}
 ]
