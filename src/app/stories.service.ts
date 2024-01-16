@@ -65,7 +65,7 @@ export class StoriesService {
   }
 
   private getRandomIds(): number[] {
-    const count = STORIES.length > 10 ? 10 : STORIES.length;
+    const count = STORIES.length > 9 ? 9 : STORIES.length;
     let randoms: number[] = [];
     let randomIds: number[] = [];
     while (randoms.length < count) {

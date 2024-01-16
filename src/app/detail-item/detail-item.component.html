@@ -18,7 +18,9 @@
         </div>
     </div>
 
-    <a *ngIf="!source" href="{{story.link}}"><button *ngIf="story.link" type="button" class="btn btn-light btn-sm">Read Here</button></a>
+    <div *ngIf="!source" class="links">
+        <a  href="{{story.link}}"><button *ngIf="story.link" type="button" class="btn btn-light btn-sm">Read Here</button></a>
+    </div>
 
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
         <div *ngFor="let genre of story.genres">
