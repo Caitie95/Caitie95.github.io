@@ -1,3 +1,4 @@
+import { Title } from "@angular/platform-browser";
 import { DataStory } from "../interfaces/data-structure/data-story";
 
 export const STORIES: DataStory[] = [
@@ -57,5 +58,11 @@ export const STORIES: DataStory[] = [
         description: "In Prue's travels around the country, she encounters unwanted company who raises questions about her own life."},
     { id: 15, title: "Pillar", author: 6, genres: [1], warnings: [], link: "https://aroworlds.com/2022/11/07/hallo-aro-pillar-k-a-cook/",
         identities: [{romantic: 1, sexuality: 4, gender: 1, prominance: 1, explicit: 2}], source: 1,
-        description: "Quick doesn't want marriage or children, and tires of the demands of those who do."}
+        description: "Quick doesn't want marriage or children, and tires of the demands of those who do."},
+    { id: 16, title: "Witch", author: 6, genres: [1], warnings: [], link: "https://aroworlds.com/2021/12/03/hallo-aro-witch-k-a-cook/",
+        identities: [{romantic: 1, sexuality: 4, gender: 5, prominance: 1, explicit: 2}], source: 1,
+        description: "An aro allo villager leaves to seek change."},
+    { id: 17, title: "Bones of Green and Hearts of Gold", author: 6, genres: [1], warnings: [], link: "https://aroworlds.com/2020/11/10/fiction-bones-of-green-and-hearts-of-gold/",
+        identities: [{romantic: 1, sexuality: 4, gender: 1, prominance: 1, explicit: 2}, {romantic: 1, sexuality: 4, gender: 6, prominance: 2, explicit: 2}], source: 1,
+        description: "Princess Constance knows that she is supposed to marry the prince. But doing so would be a mistake, so she must run to the witch for help."}
 ]
