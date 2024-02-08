@@ -64,5 +64,16 @@ export const STORIES: DataStory[] = [
         description: "An aro allo villager leaves to seek change."},
     { id: 17, title: "Bones of Green and Hearts of Gold", author: 6, genres: [1], warnings: [], link: "https://aroworlds.com/2020/11/10/fiction-bones-of-green-and-hearts-of-gold/",
         identities: [{romantic: 1, sexuality: 4, gender: 1, prominance: 1, explicit: 2}, {romantic: 1, sexuality: 4, gender: 6, prominance: 2, explicit: 2}], source: 1,
-        description: "Princess Constance knows that she is supposed to marry the prince. But doing so would be a mistake, so she must run to the witch for help."}
+        description: "Princess Constance knows that she is supposed to marry the prince. But doing so would be a mistake, so she must run to the witch for help."},
+    { id: 18, title: "Le Trotteur", author: 9, genres: [3], warnings: [1, 10], source: 2,
+        identities:[{romantic: 6, sexuality: 1, gender: 1, explicit: 2, prominance: 2}], 
+        description: "A backwater MagSkater becomes too arrogent for his own good."},
+    { id: 19, title: "The Wyvern Brood", author: 9, genres: [1], warnings: [10], identities: [{romantic: 1, sexuality: 1, gender: 1, prominance: 1, explicit: 2}],
+        description: "A young woman from a village plagued by wyverns seeks to end seige.", source: 2},
+    { id: 20, title: "Seida the Fairy Troll", author: 9, genres: [1], warnings: [10], source: 2,
+        identities: [{romantic: 1, sexuality: 1, gender: 1, prominance: 2, explicit: 1}], description: "Outcast fairy Seida is called upon to save the day."},
+    { id: 21, title: "The Daisy Haunt", author: 9, genres: [1], warnings: [], source: 2,
+        identities: [{romantic: 5, sexuality: 2, gender: 1, prominance: 1, explicit: 2}], description: "A blind gardener comes across some mysterious flowers."},
+    { id: 22, title: "Human Blooms", author: 9, genres: [1], warnings: [11], source: 2,
+        identities: [{romantic: 1, sexuality: 1, gender: 1, prominance: 1, explicit: 2}], description: "A new parent visits a grave to grieve."}
 ]
