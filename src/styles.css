@@ -14,3 +14,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
 .Science-Fiction {
     background-color: #bdfe5b;
 }
+.Horror {
+    background-color: #090504;
+    color: white;
+}

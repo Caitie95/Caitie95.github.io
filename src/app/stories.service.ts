@@ -100,7 +100,6 @@ export class StoriesService {
   }
 
   private getListStory(id: number): ListStory {
-    console.log(id)
     let story: DataStory = STORIES.filter(s => s.id == id)[0];
     let listStory: ListStory = 
       {id: story.id, 

@@ -4,8 +4,8 @@
         <button type="button" class="btn author">
             <a [routerLink]="['../../list', {author}]">{{story.author.name}}</a>
         </button></h4>
-
-    <div *ngIf="source" class="row row-cols-1 row-cols-md-2 row-cols-lg-2 links">
+        
+    <div *ngIf="source && story.link" class="row row-cols-1 row-cols-md-2 row-cols-lg-2 links">
         <div *ngIf="story.source">
             <div class="col">
                 <a [routerLink]="['../../list', {source}]">
@@ -18,7 +18,17 @@
         </div>
     </div>
 
-    <div *ngIf="!source" class="links">
+    <div *ngIf="source && !story.link" class="links">
+        <div *ngIf="story.source">
+            <div class="col">
+                <a [routerLink]="['../../list', {source}]">
+                    <button *ngIf="story.source" type="button" class="btn btn-light btn-sm">{{story.source.source}}</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!source && story.link" class="links">
         <a  href="{{story.link}}"><button *ngIf="story.link" type="button" class="btn btn-light btn-sm">Read Here</button></a>
     </div>
 

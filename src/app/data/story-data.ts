@@ -44,7 +44,7 @@ export const STORIES: DataStory[] = [
     { id: 10, title: "D.I.Y.", author: 8, genres: [1], link: "https://www.tor.com/2022/08/24/d-i-y-john-wiswell/", warnings: [8],
         identities: [{romantic: 4, sexuality: 1, gender: 2, explicit: 2, prominance: 1}, {romantic: 4, sexuality: 1, gender: 3, explicit: 2, prominance: 1}],
         description: "In a water-scarce and socially stratified near-future, two working-class, disbled teens attempt to solve a problem no one has achieved, create water."},
-    { id: 11, title: "Lemon & Salt", author: 9, genres: [3], source: 2, warnings: [5],
+    { id: 11, title: "Lemon & Salt", author: 9, genres: [3], source: 2, warnings: [5], 
         identities: [{romantic: 1, sexuality: 3, gender: 1, prominance: 1, explicit: 2}, {romantic: 1, sexuality: 3, gender: 3, prominance: 1, explicit: 2}],
         description: "Two singers renegotiate their queerplatonic relationship in a concert."},
     { id: 12, title: "Hunter", author: 6, genres: [1], warnings: [], link: "https://aroworlds.com/2021/12/17/hallo-aro-hunter-k-a-cook/",

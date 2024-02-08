@@ -8,7 +8,7 @@ export interface DetailStory {
     id: number;
     title: string;
     author: Author;
-    source?: Source;
+    source: Source;
     genres: Genre[];
     identities: DetailIdentity[];
     link?: string;    
