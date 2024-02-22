@@ -75,5 +75,8 @@ export const STORIES: DataStory[] = [
     { id: 21, title: "The Daisy Haunt", author: 9, genres: [1], warnings: [], source: 2,
         identities: [{romantic: 5, sexuality: 2, gender: 1, prominance: 1, explicit: 2}], description: "A blind gardener comes across some mysterious flowers."},
     { id: 22, title: "Human Blooms", author: 9, genres: [1], warnings: [11], source: 2,
-        identities: [{romantic: 1, sexuality: 1, gender: 1, prominance: 1, explicit: 2}], description: "A new parent visits a grave to grieve."}
+        identities: [{romantic: 1, sexuality: 1, gender: 1, prominance: 1, explicit: 2}], description: "A new parent visits a grave to grieve."},
+    { id: 23, title: "The Vampire Conundrum", author: 6, genres: [5], warnings: [12], link: "https://aroworlds.com/2019/11/16/fiction-the-vampire-conundrum-part-one/",
+        identities: [{romantic: 7, sexuality: 6, gender: 2, prominance: 1, explicit: 1}, {romantic: 1, sexuality: 1, gender: 1, prominance: 2, explicit: 1}], 
+        description: "Rowan brings an aromantic mug to the office, but doesn't know what to do when no one reacts.", source: 3}
 ]
