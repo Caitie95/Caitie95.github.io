@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/story-database",
+            "outputPath": "docs",
             "index": "index.html",
             "main": "src/main.ts",
             "polyfills": [
